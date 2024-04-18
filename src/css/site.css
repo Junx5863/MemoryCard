@@ -1,0 +1,15 @@
+:root {
+  --bg: #fafafa;
+  --font: "Archivo", sans-serif;
+  --font-display: "Archivo Narrow", sans-serif;
+  --hotpink: rgb(152, 59, 175);
+  --orange: #2186f2;
+  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  background: var(--bg);
+  font-family: var(--font);
+}

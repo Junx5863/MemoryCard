@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Memori Card</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
+      rel="stylesheet"
+    />
+    <link href="src/css/site.css" rel="stylesheet" />
+    <link href="src/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="cabecera">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Nivel</h4>
+        <div class="cabecera-num"><span id="level">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel"></button>
+    </header>
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <!-- Good -->
+      <div id="subeNivel" class="sube-nivel">
+        <div class="modal">
+          <h2>¡Muy bien!</h2>
+          <button id="subir">Siguiente nivel</button>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <!-- Not move -->
+      <div id="gameOver" class="game-over">
+        <div class="modal">
+          <h2>¡Oh no!</h2>
+          <p>Te has quedado sin movimientos 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <!-- Time Over -->
+      <div id="timeOver" class="game-over">
+        <div class="modal">
+          <h2>¡Oh no!</h2>
+          <p>Te has quedado sin tiempo 😭</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+      <!-- good job -->
+      <div id="endGame" class="end-game">
+        <div class="modal">
+          <h2>¡Enhorabuena!</h2>
+          <p>Has superado todos los niveles 🏆</p>
+          <button class="reiniciar">Reiniciar</button>
+        </div>
+      </div>
+    </main>
+    <audio
+      src="./src/sonidos/acierto.mp3"
+      class="sonido"
+      id="sonido-acierto"
+      preload="auto"
+    ></audio>
+    <audio
+      src="./src/sonidos/error.mp3"
+      class="sonido"
+      id="sonido-error"
+      preload="auto"
+    ></audio>
+    <audio
+      src="./src/sonidos/carta.mp3"
+      class="sonido"
+      id="sonido-carta"
+      preload="auto"
+    ></audio>
+
+    <script type="module" src="app.js"></script>
+    <script type="module" src="./src/js/render_btn/render_buttons.js"></script>
+  </body>
+</html>
